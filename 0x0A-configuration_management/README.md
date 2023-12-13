@@ -1,39 +1,23 @@
-Configuration management
-configuration_management
+# Configuration management
 
-Configuration management is a systems engineering process for establishing consistency of a product’s attributes throughout its life.
+In this project, I started working with Puppet as a configuration management
+tool. I practiced writing Puppet manifest files to create a file, install a
+package, and execute a command.
 
-Puppet is a tool that helps you manage and automate the configuration of servers. When you use Puppet, you define the desired state of the systems in your infrastructure that you want to manage.
+## Tasks :page_with_curl:
 
-puppet
+* **0. Create a file**
+  * [0-create_a_file.pp](./0-create_a_file.pp): Puppet manifest file that
+  creates a file `school` in the `/tmp` directory.
+    * File permissions: `0744`.
+    * File group: `www-data`.
+    * File owner: `www-data`.
+    * File content: `I love Puppet`.
 
-Obviously writing Puppet code for your infrastructure requires an investment of time and energy, but in the long term, it is for sure a must-have.
+* **1. Install a package**
+  * [1-install_a_package.pp](./1-install_a_package.pp): Puppet manifest file
+  that install `flask` from pip3.
 
-Project Requirements
-All your files will be interpreted on Ubuntu 20.04 LTS
-All your files should end with a new line
-A README.md file at the root of the folder of the project is mandatory
-Your Puppet manifests must pass puppet-lint version 2.1.1 without any errors
-Your Puppet manifests must run without error
-Your Puppet manifests first line must be a comment explaining what the Puppet manifest is about
-Your Puppet manifests files must end with the extension .pp
-Installing puppet and puppet-lint on ubuntu
-A video says it all
-Watch the video below to get a full grasp about tackling the project
-
-Click the play video to watch video Play video
-
-Commands on Terminal
-$ apt-get update && upgrade -y
-
-$ sudo apt-get install -y ruby=1:2.7+1 --allow-downgrades
-
-$ sudo apt-get install -y ruby-augeas
-
-$ sudo apt-get install -y ruby-shadow
-
-$ sudo apt-get install -y puppet
-
-#installs puppet linter
-$ gem install puppet-lint
-Follow the above instructions to install puppet and puppet-linter then watch the video to enable you understand how to get started with the task
+* **2. Execute a command**
+  * [2-execute_a_command.pp](./2-execute_a_command.pp): Puppet manifest file
+  that kills the process `killmenow`.
